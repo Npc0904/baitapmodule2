@@ -11,15 +11,14 @@ public class bai1 {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
                 if (year % 400 == 0) {
-                    System.out.println(" %d is a leap year", year);
+                    System.out.println(" %d is a leap year"+ year);
                 } else {
-                    System.out.println("%d is NOT a leap year", year);
+                    System.out.println("%d is NOT a leap year"+ year);
                 }
             }else{
-                    System.out.println("%d is a leap year", year);
-                }
-            }else
-                System.out.printf("%d is NOT a leap year", year);
+                System.out.println("%d is a leap year"+ year);
             }
-        }
+        }else
+            System.out.printf("%d is NOT a leap year", year);
     }
+}
