@@ -5,18 +5,22 @@ import java.util.Scanner;
 public class baitap4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n;
-        n = scanner.nextInt();
-        do {
             System.out.println("**PRACTICE**");
             System.out.println("1. In dãy số chia hết cho 2 và giảm dần (n >= số >= 2)");
             System.out.println("2. In các số nhỏ hơn n và tính tổng");
             System.out.println("3. In ra các ước số chẵn của n");
             System.out.println("4. In ra các ước số lẻ và số lượng các ước lẻ của n");
             System.out.println("5. In ra ước số lẻ lớn nhất của n");
-            System.out.println("6. Thoát");
-            System.out.println("Mời bạn chọn chức năng bằng cách nhập số từ 1~6");
+            System.out.println("6. Thoát ");
+            System.out.println("Mời bạn nhập lựa chọn của mình :");
             int choice = scanner.nextInt();
+        while (choice<1 || choice>6) {
+            System.out.print("Vui lòng nhập lại lựa chọn : ");
+            choice = scanner.nextInt();
+        }
+        System.out.println("Mời bạn nhập số n");
+        int n;
+        n = scanner.nextInt();
             switch (choice) {
                 case 1:
                     System.out.println("Dãy số chia hết cho 2 và giảm dần là :");
@@ -75,8 +79,6 @@ public class baitap4 {
                 case 6:
                     System.exit(0);
                 default:
-                    System.out.println("Bạn nhập không hợp lệ, Mời bạn nhập lại");
             }
-        } while (true);
     }
 }

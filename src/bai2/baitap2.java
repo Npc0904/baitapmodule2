@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class baitap2 {
     public static void main(String[] args) {
-        System.out.println("Bạn muốn mảng có bao nhiêu giá trị?");
         Scanner scanner=new Scanner(System.in);
+        System.out.println("hay nhap gia tri cua n");
         int num;
         num = scanner.nextInt();
         float[] number = new float[num];
-        float avg = 0;
-        System.out.println("hãy nhập từng giá trị cho mảng:");
+        float sum = 0;
+        System.out.println("hay nhap gia tri cua mang:");
         for (int i = 0; i < num; i++) {
-            System.out.println("Giá trị thứ "+(i+1)+" của mảng:");
+            System.out.println("gia tri thu "+(i+1)+" la:");
             number[i] = scanner.nextFloat();
-            avg += number[i];
+            sum += number[i];
         }
-        System.out.println("Trung Bình cộng của các phần tử trong mảng là : "+avg/num);
+        System.out.println("trung bing cong cua mang la : "+sum/num);
     }
 }

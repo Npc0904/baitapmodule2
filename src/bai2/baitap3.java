@@ -5,14 +5,8 @@ import java.util.Scanner;
 public class baitap3 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        int num1;
-        int num2;
-        System.out.println("Mời bạn nhập 2 số nguyên bất kỳ");
-        System.out.println("Số thứ nhất:");
-        num1 = scanner.nextInt();
-        System.out.println("Số thứ hai:");
-        num2 = scanner.nextInt();
-        do {
+        int a;
+        int b;
             System.out.println("**CACULATOR**");
             System.out.println("1. Tổng 2 số");
             System.out.println("2. Hiệu 2 số");
@@ -22,44 +16,53 @@ public class baitap3 {
             System.out.println("6. Ước chung lớn nhất");
             System.out.println("7. Bội chung nhỏ nhất");
             System.out.println("8. Thoát");
-            System.out.println("Chọn chức năng bất kỳ bằng cách nhập các số từ 1~8");
+            System.out.println("Mời bạn nhập lựa chọn của mình :");
             int choice = scanner.nextInt();
+        while (choice<1 || choice>8) {
+            System.out.print("Vui lòng nhập lại lựa chọn : ");
+            choice = scanner.nextInt();
+        }
+        System.out.println("Mời bạn nhập 2 số nguyên bất kỳ");
+        System.out.println("Số thứ nhất:");
+        a = scanner.nextInt();
+        System.out.println("Số thứ hai:");
+        b = scanner.nextInt();
             switch ( choice ){
                 case 1:
-                    System.out.println("Tổng 2 số là : "+(num1+num2));
+                    System.out.println("Tổng 2 số là : "+(a+b));
                     break;
                 case 2:
-                    if (num1 > num2){
-                        System.out.println("Hiệu 2 số là : "+(num1-num2));
+                    if (a > b){
+                        System.out.println("Hiệu 2 số là : "+(a-b));
                     }else {
-                        System.out.println("Hiệu 2 số là : "+(num2-num1));
+                        System.out.println("Hiệu 2 số là : "+(b-a));
                     }
                     break;
                 case 3:
-                    System.out.println("Tích 2 số là : "+(num1*num2));
+                    System.out.println("Tích 2 số là : "+(a*b));
                     break;
                 case 4:
-                    if (num1 >= num2 && num2 !=0){
-                        System.out.println("Thương 2 số là : "+(num1/num2));
-                    }else if(num2 > num1 && num1 !=0){
-                        System.out.println("Thương 2 số là : "+(num2/num1));
+                    if (a >= b && b !=0){
+                        System.out.println("Thương 2 số là : "+(a/b));
+                    }else if(b > a && a !=0){
+                        System.out.println("Thương 2 số là : "+(b/a));
                     }
                     break;
                 case 5:
-                    if (num1 >= num2 && num2 !=0){
-                        System.out.println("Số dư trong phép chia 2 số là : "+(num1%num2));
-                    }else if(num2 > num1 && num1 !=0){
-                        System.out.println("Số dư trong phép chia 2 số là : "+(num2%num1));
+                    if (a >= b && b !=0){
+                        System.out.println("Số dư trong phép chia 2 số là : "+(a%b));
+                    }else if(b > a && a !=0){
+                        System.out.println("Số dư trong phép chia 2 số là : "+(b%a));
                     }
                     break;
                 case 6:
-                    if (num1 ==0 || num2 ==0){
-                        System.out.println("Ước chung lớn Nhất là : "+(num1+num2));
+                    if (a ==0 || b ==0){
+                        System.out.println("Ước chung lớn Nhất là : "+(a+b));
                     }else {
                         int minNumber ;
-                        minNumber = num1 < num2 ? num1 : num2 ;
+                        minNumber = a < b ? a : b ;
                         for (int i = minNumber; i >= 1 ; i--) {
-                            if (num1 % i ==0 && num2 % i ==0){
+                            if (a % i ==0 && b % i ==0){
                                 System.out.println("Ước chung lớn Nhất là : "+i);
                                 break;
                             }
@@ -67,12 +70,12 @@ public class baitap3 {
                     }
                     break;
                 case 7:
-                    if (num1 ==0 || num2 ==0){
+                    if (a ==0 || b ==0){
                         System.out.println("bội chung nhỏ Nhất là : "+0);
                     }else {
-                        int MaxNumber = num1 <= num2 ? num1 : num2 ;
+                        int MaxNumber = a <= b ? a : b ;
                         while (true){
-                            if (MaxNumber % num1 ==0 && MaxNumber % num2 ==0){
+                            if (MaxNumber % a ==0 && MaxNumber % b ==0){
                                 System.out.println("bội chung nhỏ Nhất là : "+MaxNumber);
                                 break;
                             }
@@ -83,8 +86,6 @@ public class baitap3 {
                 case 8:
                     System.exit(0);
                 default:
-                    System.out.println("lựa chọn của bạn không hợp lệ, mời bạn chọn lại");
             }
-        }while (true);
     }
 }
