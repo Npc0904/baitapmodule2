@@ -6,18 +6,6 @@ import java.util.regex.Pattern;
 
 public class baitap {
     public static void main(String[] args) {
-//        viet chuiong trinh quan kly thong tin cua sinh vien
-//        1.ma sinh vien
-//        2.ho ten
-//        3.sodienthoai
-//        ngay thang nam sinh
-//        5 in thong tin sinh vien
-//        validate duwx lieeu cho
-//        phone dung dinh dang dong lao
-//        email
-//        ma sinh vien phai bat dau bang chu B va co 3 so ow sau
-//        ho ten ko chua ky tu dac biet tru khoang trang
-//        nam sinh
 
                 Scanner scanner=new Scanner(System.in);
                 System.out.println("Moi ban nhap thong tin");
@@ -73,7 +61,6 @@ public class baitap {
                         System.err.println("Moi ban nhap lai ngay thang nam sinh");
                     }
                 }while(true);
-//        in thong tin
                 System.out.println("Thong tin sinh vien");
                 System.out.println("Ma so : "+id);
                 System.out.println("Ho va Ten : "+fullName);
