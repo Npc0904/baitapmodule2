@@ -10,15 +10,13 @@ public class Product {
 
         public Product() {
         }
-
         public Product(String Id, String Name, Float Price, Float Import) {
             this.Id = Product.this.Id;
             this.Name = Product.this.Name;
             this.Price = Price;
             this.Import = Product.this.Import;
         }
-
-    public String getId() {
+         public String getId() {
         return Id;
     }
 
@@ -49,7 +47,6 @@ public class Product {
     public void setImport(Float Import) {
             this.Import = Product.this.Import;
         }
-        //    phương thức nhập thông tin sản phẩm
         public void enterInfo(){
             Scanner sc = new Scanner(System.in);
             do {
