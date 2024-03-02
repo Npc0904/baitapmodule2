@@ -1,4 +1,4 @@
-package bai4;
+package bai7;
 
 public class SavingAccount extends Account {
     private double rate;
